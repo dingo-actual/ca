@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project]
+name = "ca-render"
+version = "0.1"
+description = "Renders cellular automata as images"
+dependencies = [
+    "matplotlib >= 3",
+    "numpy >= 1.24"
+]
+requires-python = ">=3.9"
+
+[project.scripts]
+ca-render = "scripts.render_ca:main"
